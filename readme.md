@@ -32,7 +32,9 @@ solves the problem statement
 ## DESIGN: (SIMULATION)
 
 1)A MOBILE APP TO SEND PICTURE OF PCB TO CLOUD
+
 2)CLOUD HAS A IMAGE PROCESSING CODE TO DETECT MISSING COMPONENTS WITH THEIR LOCATION 
+
 3)CLOUD WILL SEND NOTIFICATION BACK TO USER THROUGH MOBILE APP 
 	
 
@@ -43,13 +45,17 @@ solves the problem statement
 each of the colored( 3 dimensional RGB) images into
 black and white(2D array) images and store these images
 as templates
+
 2) Also store the location data of each template by
 usingthe correct PCB board
+
 3) Find each component in the PCB board using the
 templates stored and the template matching algorithm.
+
 4) If the component location found by the algorithm
 deviate by a very large value(¿500 or 600 units) then
 the component should be considered as missing
+
 5) If the component location does not deviate or deviates
 very less (¡500 units) from the true location then the
 component will be considered to be present in the PCB
