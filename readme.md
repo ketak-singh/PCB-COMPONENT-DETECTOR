@@ -7,13 +7,25 @@ To avoid any process failure due to missing components in a MOSFET DRIVER CIRCUI
 
 ## Methododolgy:
 
-1) Data collection OF SINGLE LAYER PCB BOARDS
-
-2) Block diagram development
-
-3) Model training and Testing using data with different algorithms
-
-4) App development to notify the user about the defect in the PCB board.
+1) DataSet Generation
+• Clicking images of each component of the PCB
+• Crop them(Only PCB portion in image)
+• Store them in server as black and white (2D array)
+images with each file name as the name of the
+component itself.
+2) Algorithm Building
+• Making use of ‘TEMPLATE MATCHING ’ creating
+a project specific algorithm.
+• What is TEMPLATE MATCHING?
+template matching is to find a smaller image or
+template into a larger image. The openCV library of
+python has implementation of template matching.
+• Applying this library we are building an algorithm
+3) Implementation
+• Implementing the template matching algorithm to
+our data set and observing the outputs
+• Based on the observations creating an algorithm that
+solves the problem statement
 
 
 
@@ -27,6 +39,24 @@ To avoid any process failure due to missing components in a MOSFET DRIVER CIRCUI
 
 
 ## ALGORITHM
+1)Take images of all components of the PCB and convert
+each of the colored( 3 dimensional RGB) images into
+black and white(2D array) images and store these images
+as templates
+2) Also store the location data of each template by
+usingthe correct PCB board
+3) Find each component in the PCB board using the
+templates stored and the template matching algorithm.
+4) If the component location found by the algorithm
+deviate by a very large value(¿500 or 600 units) then
+the component should be considered as missing
+5) If the component location does not deviate or deviates
+very less (¡500 units) from the true location then the
+component will be considered to be present in the PCB
+board.
+
+
+
 
 	
 
