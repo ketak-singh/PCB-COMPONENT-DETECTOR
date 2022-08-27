@@ -62,6 +62,11 @@ component will be considered to be present in the PCB
 board.
 
 
+# How to run the app?
+## Run the backend code in your google colab and also download the templates folder into your Google drive and change the filepaths accordingly in the python code.
+## Download the apk file in your phone and start using the app to check any MOSFET TL9250 DRIVER PCB
+## NOTE: If the output of the app is undesired then you can create your own templates and update the templates foder and then use the app.
+
 
 
 	
